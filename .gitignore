@@ -1,29 +1,72 @@
-# Compiled Object files
 *.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
 *.gch
-*.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
 *.mod
 *.smod
 
-# Compiled Static libraries
 *.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
 *.out
 *.app
+
+LibrarySupport
+__history
+*.~* 
+*.dcu 
+*.local 
+*.identcache 
+*.drc 
+*.map 
+*.zip 
+*.o 
+*.lo 
+*.la 
+*.rej 
+.*~ 
+*~ 
+.#* 
+.DS_Store 
+thumbs.db 
+Thumbs.db 
+*.bak 
+*.class 
+*.ap_ 
+*.exe 
+*.dll 
+*.mine 
+*.obj 
+*.ncb 
+*.lib 
+*.log 
+*.idb 
+*.pdb 
+*.ilk 
+*.msi* 
+*.pch 
+*.suo 
+*.exp 
+*.*~ 
+*.~* 
+~*.* 
+release 
+Release 
+debug 
+Debug 
+ignore 
+Ignore 
+bin 
+Bin 
+obj 
+Obj 
+*.csproj.user 
+*.user 
+*.rsm 
+*.ipch 
+*.so.[0-9]* 
+*.a 
+*.pyc 
+*.pyo 
+__pycache__ 
+Win32 
+Win64 
+*.sdf 
+ipch

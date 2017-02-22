@@ -70,3 +70,4 @@ Win32
 Win64 
 *.sdf 
 ipch
+src/VC++/ryumpeg/ryumpeg.VC.db

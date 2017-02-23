@@ -76,11 +76,11 @@ function get_frame_type(frame:pointer):integer;
 function get_frame_position(frame:pointer):integer;
           cdecl; external 'ryumpeg.dll' delayed;
 
-function OpenStream(AFilename:string; var error:integer):pointer;
+function OpenStream(const AFilename:string; var error:integer):pointer;
 
 implementation
 
-function OpenStream(AFilename:string; var error:integer):pointer;
+function OpenStream(const AFilename:string; var error:integer):pointer;
 begin
   Result := open_stream(PAnsiChar(AnsiString(AFilename)), error);
 end;

@@ -37,20 +37,21 @@ procedure TfmMain.btOpenClick(Sender: TObject);
 var
   iError, iAudioSize : integer;
 begin
-  if OpenDialog.Execute then begin
-    FStream := OpenStream(OpenDialog.FileName, iError);
-    if iError <> 0 then raise Exception.Create('Error: open_stream');
-    Caption := IntToStr( get_duration(FStream) );
-  end;
+  if not OpenDialog.Execute then Exit;
+
+  FStream := OpenStream(OpenDialog.FileName, iError);
+  if iError <> 0 then raise Exception.Create('Error: open_stream');
+
+  Caption := IntToStr( get_duration(FStream) );
 
   FVideo := open_video(FStream, iError);
   if iError <> 0 then raise Exception.Create('Error: open_video');
 
-  FAudio := open_audio(FStream, iError);
-  if iError <> 0 then raise Exception.Create('Error: open_audio');
-
   Image.Picture.Bitmap.Width  := get_video_width (FVideo);
   Image.Picture.Bitmap.Height := -get_video_height(FVideo);
+
+  FAudio := open_audio(FStream, iError);
+  if iError <> 0 then raise Exception.Create('Error: open_audio');
 
   FWaveOut.Channels := get_channels(FAudio);
   FWaveOut.SampleRate := get_sample_rate(FAudio);

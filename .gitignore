@@ -71,3 +71,4 @@ Win64
 *.sdf 
 ipch
 src/VC++/ryumpeg/ryumpeg.VC.db
+src/VC++/vc+test/vc+test.VC.db
